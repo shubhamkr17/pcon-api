@@ -1,0 +1,85 @@
+<div id="topNav" >
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="res/img/PCON.png" height="70" width="90" alt="">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#!">
+					<i class="material-icons">home</i>
+					<span class="sr-only">(current)</span></a>
+				</li>
+
+
+				<li class="nav-item">
+					<a class="nav-link" href="https://www.github.com/pcon-jsr" target="_blank">
+						<i class="fa fa-github" style="font-size: 33px;"></i>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#" data-toggle="modal" data-target="#SubscribeBox">
+						<i class="fa fa-paper-plane" style="font-size: 28px;"></i>
+					</a>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="showNotifications">
+						<i class="material-icons" ng-click="getNotices()">notifications</i>
+					</a>
+					<div class="expand-box dropdown-menu dropdown-menu-right" id="notifications">
+					<!-- <div class="down-arrow"></div> -->
+					<div id="noticeBox">
+						<h3>Notifications</h3>
+						<div id="noticeBody">
+							<ul id="noticeList">
+								<li ng-repeat="n in notices">
+									<h4>{{ n.head }}</h4>
+									<p>{{ n.body }}</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="text-center" style="margin: 10px 0;">
+						<a href="#">Show all</a>
+					</div> -->
+			</div>
+				</li>
+
+			</ul>
+
+		</div>
+</nav>
+</div>
+
+
+
+<!-- subscription Modal content-->
+<div id="SubscribeBox" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+				<h4 style="font-family: Scope one;"class="modal-title">Subscribe to our Newsletter</h4>
+			</div>
+			<div class="modal-body">
+				<input type="text" ng-model="email" name="email" class="form-control" placeholder="Enter your email to Subscribe">
+				<!-- <p>Your email : {{email}}</p> -->
+				<p>{{status}}</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" ng-click="subscribe(email)"></a>Subscribe</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+
+	</div>
+</div>

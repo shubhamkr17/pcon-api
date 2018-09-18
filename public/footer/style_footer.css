@@ -1,0 +1,16 @@
+.footer .material-icons,.footer .fa {
+    color: #08fded;
+}
+
+.footer .bg-dark {
+  background: #797777!important;
+}
+
+.footer-1 .sub {
+    opacity: 1;
+    font-size: initial;
+}
+
+.footer .container {
+  margin: 0 auto;
+}
