@@ -37,8 +37,8 @@ function sendEmails(notice){
   var transporter = nodemailer.createTransport({
    service: 'gmail',
    auth: {
-          user: 'sk767285@gmail.com',
-          pass: 'mail99@Sk'
+          user: '#email',
+          pass: '#pass'
       }
   });
 
@@ -86,7 +86,7 @@ router.post('/',(req,res)=>{
 
   //res.writeHead(200,{'Content-Type':'text/plain'});
   res.json(notice);
-  getSubscribers(notice);
+  //getSubscribers(notice);
   debug(result);
 });
 
