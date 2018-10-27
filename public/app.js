@@ -35,7 +35,7 @@ app.config(['$routeProvider',function config($routeProvider)
 	  controller : 'teamController'
 	}).
 	when('/achievements', {
-	  templateUrl: 'achieve/achieve.html'
+	  templateUrl: 'achievements/achievements.html'
 	  //controller : 'homeController'
 	}).
 	when('/gallery', {
