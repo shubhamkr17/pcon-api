@@ -1,28 +1,45 @@
 body{
-    background-color: #152836
+    background-color: #fff;
 }
 
 #lightgallery .img-responsive {
   border-radius: 4%;
+  border: 1px solid #fff;
 }
 
 .demo-gallery {
   background-color: #fafafa;
+  margin-top :40px;
 }
 
 .demo-gallery > ul {
-  margin-bottom: 0;
+  list-style: none;
   justify-content: center;
+  margin: 0 4%;
+
 }
 .demo-gallery > ul > li {
+    padding: 2%;
     float: left;
-    margin-bottom: 48px;
-    xmargin-right: 20px;
-    width: 200px;
+    width : 33%;
+    height : 10%;
 }
+
+@media (max-width:640px){
+  width : 90%;
+}
+@media screen and (max-width: 740px) {
+
+  .demo-gallery > ul > li {
+      width : 90%;
+  }
+
+}
+
+
 .demo-gallery > ul > li a {
-  border: 3px solid #FFF;
-  border-radius: 3px;
+  xborder: 1px solid #FFF;
+  border-radius: 2px;
   display: block;
   overflow: hidden;
   position: relative;

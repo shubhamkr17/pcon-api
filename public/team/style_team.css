@@ -289,6 +289,7 @@ transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease, -webk
 }
 .at-column:hover .at-social {
 margin: 16px 0 0;
+padding-left: 0;
 opacity: 1;
 }
 @media (max-width: 800px) {
@@ -366,16 +367,17 @@ fill:#2f4f4f;
 }
 
 body {
-background: #FFF;
+background: #fff;
 font-family: 'Roboto', sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-max-width: 1170px;
+xmax-width: 1170px;
+background: #fff;
 width: 100%;
-margin: 100px auto;
+xmargin: 100px auto;
 padding: 0 20px;
 box-sizing: border-box;
 /* -webkit-transform-origin: top center;

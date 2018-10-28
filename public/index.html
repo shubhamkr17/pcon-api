@@ -1,191 +1,428 @@
 <!DOCTYPE html>
-<html ng-app="pcon">
-<head>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Abril+Fatface" rel="stylesheet"> -->
-	<link href="https://fonts.googleapis.com/css?family=Scope+One|Trocchi">
-
-  <!-- lightGallery -->
-  <link rel="stylesheet" href="https://raw.githack.com/sachinchoolur/lightGallery/1.1.5/light-gallery/css/lightGallery.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="https://raw.githack.com/sachinchoolur/lightGallery/1.1.5/light-gallery/js/lightGallery.js"></script>
-  <link href="res/lightGallery/dist/css/lightgallery.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" type="text/css" href="res/css/tiltcss/normalize.css" />
-
+<html lang="en" class="no-js" >
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PCON</title>
+		<meta name="description" content="A sidebar menu as seen on the Google Nexus 7 website" />
+		<meta name="keywords" content="google nexus 7 menu, css transitions, sidebar, side menu, slide out menu" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
 
 
+		<link rel="stylesheet" href="footer/footer-distributed-with-address-and-phones.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="res/css/tiltcss/demo.css" />
-  <link rel="stylesheet" type="text/css" href="res/css/tiltcss/pater.css" />
-  <link rel="stylesheet" type="text/css" href="res/css/tiltcss/component.css" /> -->
-	<!-- footer -->
-	<link rel="stylesheet" href="res/bootstrap/css/footercss/theme-fire.css">
-  <link rel="stylesheet" href="res/bootstrap/css/footercss/pe-icon-7-stroke.css">
+		<link rel="stylesheet" type="text/css" href="css/tiltcss/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/tiltcss/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tiltcss/pater.css" />
+		<link rel="stylesheet" type="text/css" href="css/tiltcss/component.css" />
+		<link rel="stylesheet" href="css/custom.css">
+		<style media="screen">
+			#noticeBox {
+				display: none;
+				width: 25%;
+				height: 600%;
+				padding: 0px 12px 0px 12px;
+				overflow-y: auto;
+				background:white;
+				color: #2f2544;
+				z-index:5;
+				position:absolute;
+				right:0;
+				top:60px;
+				border: 1px solid #c6d0da;
+				line-height: 32px;
+			}
 
-	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/custom.css">
-	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/main.css">
+			#noticeBody {
+				border-bottom: 1px dashed #97bbce;
+			}
+
+			#noticeContent p {
+				font-size: 16px;
+				color: black;
+			}
+
+			#aboutHeading h2{
+				font-size: 32px;
+				text-align: center;
+				font-family: Scope one;
+			}
+
+			#aboutUs {
+				width: 80%;
+				margin: 80px auto;
+			}
+
+			#aboutImage {
+				float: left;
+			}
+
+			#aboutContent {
+				padding-top: 12px;
+				font-size: 18px;
+			}
+
+			#recentActivity {
+				width: 80%;
+    		margin: 80px auto;
+			}
+
+			.eventDesc {
+			  padding-top: 50px;
+				padding-left: 50px;
+			}
+
+			.eventImage img{
+				width: 320px;
+				border-radius: 100%;
+			}
+
+			.at-column {
+			z-index: 0;
+			position: relative;
+			background: #FFF;
+			box-shadow: 0 0 0 1px #4A4A4C;
+			padding: 10px;
+			box-sizing: border-box;
+			transition: box-shadow 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
+			transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease;
+			transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
+			}
+
+			.at-column:hover {
+			z-index: 1;
+			box-shadow: 0 8px 50px #038A86;
+			-webkit-transform: scale(1.05);
+			 transform: scale(1.05);
+			transition: box-shadow 0.2s ease, z-index 0s 0s ease, -webkit-transform 0.2s ease;
+			transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease;
+			transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease, -webkit-transform 0.2s ease;
+			}
+
+			@media screen and (max-width: 768px) {
+
+				header h1{
+					text-align: center;
+				}
+
+				#noticeBox {
+					width: 80%;
+					text-align: left;
+				}
+				#noticeBox h3 {
+					font-size: 18px;
+				}
+
+				#noticeBox p {
+					font-size: 16px;
+				}
+
+				#aboutHeading h2{
+					font-size: 24px;
+				}
+
+				#aboutContent h3{
+					text-align: center;
+				}
+
+				#aboutContent p{
+					text-align: center;
+				}
+
+				.eventDesc {
+					padding: 20px;
+				}
+			}
+		</style>
+
+	</head>
+	<body class ="loading" style="font-family: Scope one;">
+		<div class="container" id="mainContainer">
+			<ul id="gn-menu" class="gn-menu-main">
+			  <li class="gn-trigger">
+			    <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+			    <nav class="gn-menu-wrapper">
+			      <div class="gn-scroller">
+			        <ul class="gn-menu">
+			          <li>
+			            <a class="gn-icon gn-icon-download"
+									style="color: #2f2544;" href="https://github.com/pcon-jsr">GitHub Repositories</a>
+			          </li>
 
 
-  <!-- <link rel="stylesheet" type="text/css" href="res/css/custom.css">
-  <link rel="stylesheet" type="text/css" href="res/css/main.css"> -->
-  <link rel="stylesheet" href="footer/style_footer.css">
-  <link rel="stylesheet" href="gallery/style_gallery.css">
-	<link rel="stylesheet" href="home/style_home.css">
-	<link rel="stylesheet" href="team/style_team.css">
-	<link rel="stylesheet" href="navbar/style_nav.css">
-	<link rel="stylesheet" href="achievements/style_achievements.css">
+			          <li>
+			            <a style="color: #2f2544;" class="gn-icon gn-icon-archive">Archives</a>
+			          </li>
+			          <li><a class="gn-icon gn-icon-article" style="color: #2f2544;"
+									href="http://nitjsr.ac.in/">NITJSR Website</a></li>
+								<li><a class="gn-icon gn-icon-help" target="_blank"style="color: #2f2544;"
+									href="https://join.slack.com/t/pcon-nitjsr-workspace/shared_invite/enQtNDI4MTEwNTg1MzMzLTlhZGQ2YzA0Y2QwMzA4YTQzNmYxNWRjMmQ3MTIwYWI1MGQ0N2MwNTFkZmMxZjA1YTM4ZjUxZmZiN2MzZmFiYzI">Help</a></li>
+			        </ul>
+			      </div><!-- /gn-scroller -->
+			    </nav>
+			  </li>
+				<div id="noticeBox">
+					<div id="noticeBody">
+						<div id="noticeHead">
+					<ul style="margin-bottom: 0px; padding-left: 12px; list-style-type: disc;">
+						<li><h3 style="text-decoration: underline; margin-bottom: 0px; font-size: 20px;">[[head]]</h3></li>
+				  </ul>
+				</div>
+				<div id="noticeContent">
+					<p style="padding-bottom: 20px; padding-left: 12px; margin-top: 3px;">[[body]]</p>
+				</div>
+				</div>
+				</div>
+			  <li><a href="/" style="color: #2f2544;font-size:18px">PCON</a></li>
+			  <li><a class="codrops-icon codrops-icon-drop" id="notificationBtn" style="color: #2f2544"><span>Notification</span></a></li>
 
 
-  <script src="res/js/angular/angular.min.js" charset="utf-8"></script>
-  <script src="res/js/angular/angular-route.min.js" charset="utf-8"></script>
+			</ul>
+
+			<header>
+
+				<h1>Programming Club of NIT JSR <span style="color:#2f2544">#Tagline</span></h1>
+			</header>
+</div><!-- /container -->
+
+			<div id="aboutUs">
+			<section class="wrapper style1">
+				<div id="aboutHeading">
+					<h2>&#34;Code never lies, comments sometimes do.&#34;</h2>
+				</div>
+
+				<!-- 2 Columns -->
+					<div>
+						<div id="aboutImage">
+								<img src="img/home_pic.jpg" alt="" style="width: 320px; border-radius: 100%;" />
+						</div>
+						<div id="aboutContent">
+							<h3 style="font-family: Scope one;" >Who are we?</h3>
+							<p>We, at Programming Club of NIT Jamshedpur, are a group of highly enthusiastic and dedicated individuals striving to spread algorithmic thinking to ignite the minds of the contemporary generation to Code for the Future. PCON consists of a diverse group which focuses on Competitive Coding, App and web design, Cloud Computing, Machine Learning and many more. If you think that the bits are the alphabets of the future, you are One of Us, spreading the gene-o-code all the way!</p>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+			</section>
+		</div>
+
+		<div class="container" id="recentActivity">
+			<div>
+				<h2 style="text-align: center; text-decoration: underline; font-size: 32px;">Recent Activities</h2>
+			</div>
+			<div id="firstEvent" class="at-column">
+				<div class="eventImage"   style="float: right;">
+					<img src="img/home_pic.jpg">
+				</div>
+				<div class="eventDesc">
+					<div style="margin-top: 20px;">
+
+						<h3>Hackathon : National Initiative for Design Innovation</h3>
+					</div>
+					<div><p>We, at Programming Club of NIT Jamshedpur, are a group of highly enthusiastic and dedicated individuals striving to spread algorithmic thinking to ignite the minds of the contemporary generation to Code for the Future. PCON consists of a diverse group which focuses on Competitive Coding, App and web design, Cloud Computing, Machine Learning and many more. If you think that the bits are the alphabets of the future, you are One of Us, spreading the gene-o-code all the way!</p></div>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+
+			<div id="secondEvent" class="at-column" style="margin-top: 50px; border">
+				<div class="eventImage" style="float: left">
+					<img src="img/home_pic.jpg">
+				</div>
+				<div class="eventDesc">
+					<div><h3>Workshop : Introduction to Programming with C</h3></div>
+					<div><p>We, at Programming Club of NIT Jamshedpur, are a group of highly enthusiastic and dedicated individuals striving to spread algorithmic thinking to ignite the minds of the contemporary generation to Code for the Future. PCON consists of a diverse group which focuses on Competitive Coding, App and web design, Cloud Computing, Machine Learning and many more. If you think that the bits are the alphabets of the future, you are One of Us, spreading the gene-o-code all the way!</p></div>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		</div>
+
+		<div class="container">
+			<main>
+			<section class="content content--c5">
+			<a href="gallery/gallery.html" class="tilter tilter--5">
+				<figure class="tilter__figure">
+					<img class="tilter__image" src="img/cast.jpg" alt="img09" />
+					<div class="tilter__deco tilter__deco--shine"><div></div></div>
+					<div class="tilter__deco tilter__deco--overlay"></div>
+					<figcaption class="tilter__caption">
+						<!-- <h3 class="tilter__title">Gary Freeman</h3> -->
+						<p class="tilter__description">Gallery</p>
+					</figcaption>
+					<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+						<path d="M20.5,20.5h260v375h-260V20.5z" />
+					</svg>
+				</figure>
+			</a>
+			<a href="achievement/achievement.html" class="tilter tilter--5">
+				<figure class="tilter__figure">
+					<img class="tilter__image" src="img/acheive.png" alt="img10" />
+					<div class="tilter__deco tilter__deco--shine"><div></div></div>
+					<div class="tilter__deco tilter__deco--overlay"></div>
+					<figcaption class="tilter__caption" style="padding-left: 40px;">
+						<!-- <h3 class="tilter__title">Andrea Torchini</h3> -->
+						<p class="tilter__description">Achievements</p>
+					</figcaption>
+					<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+						<path d="M20.5,20.5h260v375h-260V20.5z" />
+					</svg>
+				</figure>
+			</a>
+			<a href="team/team.html"class="tilter tilter--5">
+				<figure class="tilter__figure">
+					<img class="tilter__image" src="img/team.png" alt="img09" />
+					<div class="tilter__deco tilter__deco--shine"><div></div></div>
+					<div class="tilter__deco tilter__deco--overlay"></div>
+					<figcaption class="tilter__caption">
+						<!-- <h3 class="tilter__title">Gary Freeman</h3> -->
+						<p class="tilter__description">Team</p>
+					</figcaption>
+					<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+						<path d="M20.5,20.5h260v375h-260V20.5z" />
+					</svg>
+				</figure>
+			</a>
+		</section>
+		</main>
+		</div>
+
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Programming Club of NITJSR</h3>
+
+				<p class="footer-links">
+					<a href="/">Home</a>
+					·
+					<a href="#">Archives</a>
+					·
+					<a href="/">About</a>
+					·
+					<a href="#">FAQ's</a>
+				</p>
+
+				<p class="footer-company-name">PCON-NITJSR &copy; 2018</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>National Institute of Technology</span> Jamshedpur</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 555 123 4567</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:pcon-nitjsr@gmail.com">pcon-nitjsr@gmail.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>Reach Us At</span>
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="https://www.facebook.com/pconjsr/" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.linkedin.com/company/pconjsr/" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<a href="https://github.com/pcon-jsr" target="_blank"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
 
 
-	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/tiltcss/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/tiltcss/demo.css" />
-	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/tiltcss/pater.css" />
-	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/tiltcss/component.css" />
-	<script src="res/bootstrap/js/jquery-3.3.1.min.js" charset="utf-8"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="js/jquery.miranda.min.js"></script>
+		<script src="script.js" charset="utf-8"></script>
 
+		<!-- tilder -->
+		<script src="js/tiltjs/imagesloaded.pkgd.min.js"></script>
+		<script src="js/tiltjs/anime.min.js"></script>
+		<script src="js/tiltjs/main.js"></script>
 
-	</style>
+		<script>
+			(function() {
+				var tiltSettings = [
+				{},
+				];
 
-</head>
-<body style="font-family: Scope one;"class="loading" >
+				function init() {
+					var idx = 0;
+					[].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) {
+						idx = pos%2 === 0 ? idx+1 : idx;
+						new TiltFx(el, tiltSettings[idx-1]);
+					});
+				}
 
-<div class="container-fluid">
+				// Preload all images.
+				imagesLoaded(document.querySelector('main'), function() {
+					document.body.classList.remove('loading');
+					init();
+				});
 
+				// REMOVE THIS!
+				// For Demo purposes only. Prevent the click event.
+				[].slice.call(document.querySelectorAll('a[href="#"]')).forEach(function(el) {
+					el.addEventListener('click', function(ev) { ev.preventDefault(); });
+				});
 
-<div  ng-include="'navbar/nav.html'" ng-controller="navController"></div>
-<div ng-view autoscroll="true"></div>
+				var pater = document.querySelector('.pater'),
+					paterSVG = pater.querySelector('.pater__svg'),
+					pathEl = paterSVG.querySelector('path'),
+					paths = {default: pathEl.getAttribute('d'), active: paterSVG.getAttribute('data-path-hover')};
 
-<div class="container-fluid">
+				pater.addEventListener('mouseenter', function() {
+					anime.remove(pathEl);
+					anime({
+						targets: pathEl,
+						d: paths.active,
+						duration: 400,
+						easing: 'easeOutQuad'
+					});
+				});
 
-		<!-- <div class="col-md-3 box" style="margin-left: 50px;"></div>
-		<div class="col-md-3 box"></div>
-		<div class="col-md-3 box"></div> -->
-		<main>
-		<section class="content content--c5">
-		<a href="#!gallery" class="tilter tilter--5">
-			<figure class="tilter__figure">
-				<img class="tilter__image" src="res/img/img_home/cast.jpg" alt="img09" />
-				<div class="tilter__deco tilter__deco--shine"><div></div></div>
-				<div class="tilter__deco tilter__deco--overlay"></div>
-				<figcaption class="tilter__caption">
-					<!-- <h3 class="tilter__title">Gary Freeman</h3> -->
-					<p class="tilter__description">Gallery</p>
-				</figcaption>
-				<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
-					<path d="M20.5,20.5h260v375h-260V20.5z" />
-				</svg>
-			</figure>
-		</a>
-		<a href="#!achievements" class="tilter tilter--5">
-			<figure class="tilter__figure">
-				<img class="tilter__image" src="res/img/img_home/acheive.png" alt="img10" />
-				<div class="tilter__deco tilter__deco--shine"><div></div></div>
-				<div class="tilter__deco tilter__deco--overlay"></div>
-				<figcaption class="tilter__caption">
-					<!-- <h3 class="tilter__title">Andrea Torchini</h3> -->
-					<p class="tilter__description">Achievements</p>
-				</figcaption>
-				<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
-					<path d="M20.5,20.5h260v375h-260V20.5z" />
-				</svg>
-			</figure>
-		</a>
-		<a href="#!team" class="tilter tilter--5">
-			<figure class="tilter__figure">
-				<img class="tilter__image" src="res/img/img_home/team.png" alt="img09" />
-				<div class="tilter__deco tilter__deco--shine"><div></div></div>
-				<div class="tilter__deco tilter__deco--overlay"></div>
-				<figcaption class="tilter__caption">
-					<!-- <h3 class="tilter__title">Gary Freeman</h3> -->
-					<p class="tilter__description">Team</p>
-				</figcaption>
-				<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
-					<path d="M20.5,20.5h260v375h-260V20.5z" />
-				</svg>
-			</figure>
-		</a>
-	</section>
-	</main>
-</div>
+				pater.addEventListener('mouseleave', function() {
+					anime.remove(pathEl);
+					anime({
+						targets: pathEl,
+						d: paths.default,
+						duration: 400,
+						easing: 'easeOutExpo'
+					});
+				});
+			})();
+			</script>
 
 
 
-<div ng-include="'footer/footer.html'"></div>
 
-</div>
-<!-- <script src="res/js/tiltjs/imagesloaded.pkgd.min.js"></script>
-<script src="res/js/tiltjs/anime.min.js"></script>
-<script src="res/js/tiltjs/main.js"></script> -->
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
 
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script type="text/javascript" src="res/js/script.js"></script>
-<script type="text/javascript" src="app.js"></script>
-<script src="res/bootstrap/js/tiltjs/imagesloaded.pkgd.min.js"></script>
-<script src="res/bootstrap/js/tiltjs/anime.min.js"></script>
-<script src="res/bootstrap/js/tiltjs/main.js"></script>
-<script type="text/javascript" src="res/bootstrap/js/script.js"></script>
-<script>
-	(function() {
-		var tiltSettings = [
-		{},
-		];
 
-		function init() {
-			var idx = 0;
-			[].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) {
-				idx = pos%2 === 0 ? idx+1 : idx;
-				new TiltFx(el, tiltSettings[idx-1]);
-			});
-		}
 
-		// Preload all images.
-		imagesLoaded(document.querySelector('main'), function() {
-			document.body.classList.remove('loading');
-			init();
-		});
-
-		// REMOVE THIS!
-		// For Demo purposes only. Prevent the click event.
-		[].slice.call(document.querySelectorAll('a[href="#"]')).forEach(function(el) {
-			el.addEventListener('click', function(ev) { ev.preventDefault(); });
-		});
-
-		var pater = document.querySelector('.pater'),
-			paterSVG = pater.querySelector('.pater__svg'),
-			pathEl = paterSVG.querySelector('path'),
-			paths = {default: pathEl.getAttribute('d'), active: paterSVG.getAttribute('data-path-hover')};
-
-		pater.addEventListener('mouseenter', function() {
-			anime.remove(pathEl);
-			anime({
-				targets: pathEl,
-				d: paths.active,
-				duration: 400,
-				easing: 'easeOutQuad'
-			});
-		});
-
-		pater.addEventListener('mouseleave', function() {
-			anime.remove(pathEl);
-			anime({
-				targets: pathEl,
-				d: paths.default,
-				duration: 400,
-				easing: 'easeOutExpo'
-			});
-		});
-	})();
-	</script>
-
-</body>
+	</body>
 </html>

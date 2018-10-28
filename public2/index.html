@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html ng-app="pcon">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Abril+Fatface" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Scope+One|Trocchi">
+
+  <!-- lightGallery -->
+  <link rel="stylesheet" href="https://raw.githack.com/sachinchoolur/lightGallery/1.1.5/light-gallery/css/lightGallery.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://raw.githack.com/sachinchoolur/lightGallery/1.1.5/light-gallery/js/lightGallery.js"></script>
+  <link href="res/lightGallery/dist/css/lightgallery.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="res/css/tiltcss/normalize.css" />
+
+  <link rel="stylesheet" type="text/css" href="res/css/tiltcss/demo.css" />
+  <link rel="stylesheet" type="text/css" href="res/css/tiltcss/pater.css" />
+  <link rel="stylesheet" type="text/css" href="res/css/tiltcss/component.css" /> -->
+	<!-- footer -->
+	<link rel="stylesheet" href="res/bootstrap/css/footercss/theme-fire.css">
+  <link rel="stylesheet" href="res/bootstrap/css/footercss/pe-icon-7-stroke.css">
+
+	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/main.css">
+
+
+  <!-- <link rel="stylesheet" type="text/css" href="res/css/custom.css">
+  <link rel="stylesheet" type="text/css" href="res/css/main.css"> -->
+  <link rel="stylesheet" href="footer/style_footer.css">
+  <link rel="stylesheet" href="gallery/style_gallery.css">
+	<link rel="stylesheet" href="home/style_home.css">
+	<link rel="stylesheet" href="team/style_team.css">
+	<link rel="stylesheet" href="navbar/style_nav.css">
+	<link rel="stylesheet" href="achievements/style_achievements.css">
+
+
+  <script src="res/js/angular/angular.min.js" charset="utf-8"></script>
+  <script src="res/js/angular/angular-route.min.js" charset="utf-8"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/tiltcss/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/tiltcss/demo.css" />
+	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/tiltcss/pater.css" />
+	<link rel="stylesheet" type="text/css" href="res/bootstrap/css/tiltcss/component.css" />
+	<script src="res/bootstrap/js/jquery-3.3.1.min.js" charset="utf-8"></script>
+
+
+</head>
+<body style="font-family: Scope one;"class="loading" >
+
+<div class="container-fluid">
+
+
+<div  ng-include="'navbar/nav.html'" ng-controller="navController"></div>
+<div ng-view autoscroll="true"></div>
+
+<div class="container-fluid">
+
+		<!-- <div class="col-md-3 box" style="margin-left: 50px;"></div>
+		<div class="col-md-3 box"></div>
+		<div class="col-md-3 box"></div> -->
+		<main>
+		<section class="content content--c5">
+		<a href="#!gallery" class="tilter tilter--5">
+			<figure class="tilter__figure">
+				<img class="tilter__image" src="res/img/img_home/cast.jpg" alt="img09" />
+				<div class="tilter__deco tilter__deco--shine"><div></div></div>
+				<div class="tilter__deco tilter__deco--overlay"></div>
+				<figcaption class="tilter__caption">
+					<!-- <h3 class="tilter__title">Gary Freeman</h3> -->
+					<p class="tilter__description">Gallery</p>
+				</figcaption>
+				<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+					<path d="M20.5,20.5h260v375h-260V20.5z" />
+				</svg>
+			</figure>
+		</a>
+		<a href="#!achievements" class="tilter tilter--5">
+			<figure class="tilter__figure">
+				<img class="tilter__image" src="res/img/img_home/acheive.png" alt="img10" />
+				<div class="tilter__deco tilter__deco--shine"><div></div></div>
+				<div class="tilter__deco tilter__deco--overlay"></div>
+				<figcaption class="tilter__caption">
+					<!-- <h3 class="tilter__title">Andrea Torchini</h3> -->
+					<p class="tilter__description">Achievements</p>
+				</figcaption>
+				<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+					<path d="M20.5,20.5h260v375h-260V20.5z" />
+				</svg>
+			</figure>
+		</a>
+		<a href="#!team" class="tilter tilter--5">
+			<figure class="tilter__figure">
+				<img class="tilter__image" src="res/img/img_home/team.png" alt="img09" />
+				<div class="tilter__deco tilter__deco--shine"><div></div></div>
+				<div class="tilter__deco tilter__deco--overlay"></div>
+				<figcaption class="tilter__caption">
+					<!-- <h3 class="tilter__title">Gary Freeman</h3> -->
+					<p class="tilter__description">Team</p>
+				</figcaption>
+				<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+					<path d="M20.5,20.5h260v375h-260V20.5z" />
+				</svg>
+			</figure>
+		</a>
+	</section>
+	</main>
+</div>
+
+
+
+<div ng-include="'footer/footer.html'"></div>
+
+</div>
+<!-- <script src="res/js/tiltjs/imagesloaded.pkgd.min.js"></script>
+<script src="res/js/tiltjs/anime.min.js"></script>
+<script src="res/js/tiltjs/main.js"></script> -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="res/js/script.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script src="res/bootstrap/js/tiltjs/imagesloaded.pkgd.min.js"></script>
+<script src="res/bootstrap/js/tiltjs/anime.min.js"></script>
+<script src="res/bootstrap/js/tiltjs/main.js"></script>
+<script type="text/javascript" src="res/bootstrap/js/script.js"></script>
+<script>
+	(function() {
+		var tiltSettings = [
+		{},
+		];
+
+		function init() {
+			var idx = 0;
+			[].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) {
+				idx = pos%2 === 0 ? idx+1 : idx;
+				new TiltFx(el, tiltSettings[idx-1]);
+			});
+		}
+
+		// Preload all images.
+		imagesLoaded(document.querySelector('main'), function() {
+			document.body.classList.remove('loading');
+			init();
+		});
+
+		// REMOVE THIS!
+		// For Demo purposes only. Prevent the click event.
+		[].slice.call(document.querySelectorAll('a[href="#"]')).forEach(function(el) {
+			el.addEventListener('click', function(ev) { ev.preventDefault(); });
+		});
+
+		var pater = document.querySelector('.pater'),
+			paterSVG = pater.querySelector('.pater__svg'),
+			pathEl = paterSVG.querySelector('path'),
+			paths = {default: pathEl.getAttribute('d'), active: paterSVG.getAttribute('data-path-hover')};
+
+		pater.addEventListener('mouseenter', function() {
+			anime.remove(pathEl);
+			anime({
+				targets: pathEl,
+				d: paths.active,
+				duration: 400,
+				easing: 'easeOutQuad'
+			});
+		});
+
+		pater.addEventListener('mouseleave', function() {
+			anime.remove(pathEl);
+			anime({
+				targets: pathEl,
+				d: paths.default,
+				duration: 400,
+				easing: 'easeOutExpo'
+			});
+		});
+	})();
+	</script>
+
+</body>
+</html>

@@ -18,6 +18,20 @@ router.get('/',(req, res)=> {
   });
 });
 
+router.get('/final',(req, res)=> {
+  Member.find({year:"final"},function (err,user) {
+    if(err) throw err;
+    res.json(user)
+  });
+});
+
+router.get('/prefinal',(req, res)=> {
+  Member.find({year:"prefinal"},function (err,user) {
+    if(err) throw err;
+    res.json(user)
+  });
+});
+
 router.post('/',(req,res)=>{
   const member = new Member({
     name : req.body.name,

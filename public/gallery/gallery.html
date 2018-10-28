@@ -1,160 +1,248 @@
-<div class="container">
-  <h3 style="text-align:center; font-size: 50px; ">Gallery</h3>
-  <div class="demo-gallery">
-      <ul id="lightgallery" class="list-unstyled row">
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img1.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img1.JPG">
-              </a>
-          </li>
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PCON</title>
+		<meta name="description" content="A sidebar menu as seen on the Google Nexus 7 website" />
+		<meta name="keywords" content="google nexus 7 menu, css transitions, sidebar, side menu, slide out menu" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/component.css" />
+		<script src="../js/modernizr.custom.js"></script>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img2.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img2.JPG">
-              </a>
-          </li>
+		<link rel="stylesheet" href="../footer/footer-distributed-with-address-and-phones.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img3.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img3.JPG">
-              </a>
-          </li>
+    <link type="text/css" rel="stylesheet" href="lightGallery/dist/css/lightgallery.css" />
+    <style type="text/css">
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img4.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img4.JPG">
-              </a>
-          </li>
+    </style>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img5.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img5.JPG">
-              </a>
-          </li>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img6.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img6.JPG">
-              </a>
-          </li>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img7.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img7.JPG">
-              </a>
-          </li>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img8.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img8.JPG">
-              </a>
-          </li>
+    <link rel="stylesheet" href="style_gallery.css">
+		<link rel="stylesheet" href="../css/custom.css">
+		<style media="screen">
+		#noticeBox {
+			display: none;
+			width: 25%;
+			height: 600%;
+			padding: 0px 12px 0px 12px;
+			overflow-y: auto;
+			background:white;
+			color: #2f2544;
+			z-index:5;
+			position:absolute;
+			right:0;
+			top:60px;
+			border: 1px solid #c6d0da;
+			line-height: 32px;
+		}
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img9.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img9.JPG">
-              </a>
-          </li>
+		#noticeBody {
+			border-bottom: 1px dashed #97bbce;
+		}
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img10.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img10.JPG">
-              </a>
-          </li>
+		#noticeContent p {
+			font-size: 16px;
+			color: black;
+		}
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img11.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img11.JPG">
-              </a>
-          </li>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img12.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img12.JPG">
-              </a>
-          </li>
+			@media screen and (max-width: 768px) {
+				#noticeBox {
+					width: 80%;
+					text-align: left;
+				}
+				#noticeBox h3 {
+					font-size: 18px;
+				}
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img13.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img13.JPG">
-              </a>
-          </li>
+				#noticeBox p {
+					font-size: 16px;
+				}
+				header h1{
+					text-align: center;
+				}
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img14.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img14.JPG">
-              </a>
-          </li>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img15.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img15.JPG">
-              </a>
-          </li>
+			}
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img16.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img16.JPG">
-              </a>
-          </li>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img17.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img17.JPG">
-              </a>
-          </li>
+		</style>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img18.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img18.JPG">
-              </a>
-          </li>
+	</head>
+	<body style="font-family: Scope one;">
+    <!-- <h1 style="margin-top:64px;text-align:center;text-decoration:underline;font-size:48px;">Gallery</h1> -->
+		<div class="container" id="mainContainer">
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img19.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img19.JPG">
-              </a>
-          </li>
+			<ul id="gn-menu" class="gn-menu-main">
+			  <li class="gn-trigger">
+			    <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+			    <nav class="gn-menu-wrapper">
+			      <div class="gn-scroller">
+							<ul class="gn-menu">
+			          <li>
+			            <a class="gn-icon gn-icon-download"
+									style="color: #2f2544;" href="https://github.com/pcon-jsr">GitHub Repositories</a>
+			          </li>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img20.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img20.JPG">
-              </a>
-          </li>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img21.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img21.JPG">
-              </a>
-          </li>
+			          <li>
+			            <a style="color: #2f2544;" class="gn-icon gn-icon-archive">Archives</a>
+			          </li>
+			          <li><a class="gn-icon gn-icon-article" style="color: #2f2544;"
+									href="http://nitjsr.ac.in/">NITJSR Website</a></li>
+								<li><a class="gn-icon gn-icon-help" target="_blank"style="color: #2f2544;"
+									href="https://join.slack.com/t/pcon-nitjsr-workspace/shared_invite/enQtNDI4MTEwNTg1MzMzLTlhZGQ2YzA0Y2QwMzA4YTQzNmYxNWRjMmQ3MTIwYWI1MGQ0N2MwNTFkZmMxZjA1YTM4ZjUxZmZiN2MzZmFiYzI">Help</a></li>
+			        </ul>
+			      </div><!-- /gn-scroller -->
+			    </nav>
+			  </li>
+				<div id="noticeBox">
+					<div id="noticeBody">
+						<div id="noticeHead">
+					<ul style="margin-bottom: 0px; padding-left: 12px; list-style-type: disc;">
+						<li><h3 style="text-decoration: underline; margin-bottom: 0px; font-size: 20px;">[[head]]</h3></li>
+				  </ul>
+				</div>
+				<div id="noticeContent">
+					<p style="padding-bottom: 20px; padding-left: 12px; margin-top: 3px;">[[body]]</p>
+				</div>
+				</div>
+				</div>
+			  <li><a href="/" style="color: #2f2544;font-size:18px">PCON</a></li>
+			  <li><a class="codrops-icon codrops-icon-drop" id="notificationBtn" style="color: #2f2544"><span>Notification</span></a></li>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img22.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img22.JPG">
-              </a>
-          </li>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img23.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img23.JPG">
-              </a>
-          </li>
+			</ul>
+			<header style="height: 0;">
+				<h1>GALLERY</h1>
+			</header>
 
-          <li class="col-xs-6 col-sm-4 col-md-4" data-src="res/img/gallery/img24.JPG" >
-              <a href="">
-                  <img class="img-responsive" src="res/img/gallery/img24.JPG">
-              </a>
-          </li>
 
-      </ul>
-  </div>
-</div>
+      <script src="../js/jquery.miranda.min.js"></script>
+      <script src="gallery_script.js" charset="utf-8"></script>
+      <!-- <div id="lightgallery">
+        <a href="img/[[imgName]]">
+            <img src="img/[[imgName]]" />
+        </a>
+      </div> -->
+      <div class="demo-gallery">
+          <ul id="lightgallery" class="list-unstyled row">
+              <li class="col-xs-6 col-sm-4 col-md-4" data-responsive=""
+              data-src="img/[[imgName]]" data-sub-html="<p></p>">
+                  <a href="">
+                      <img class="img-responsive" src="img/[[imgName]]">
+                  </a>
+              </li>
+          </ul>
+      </div>
 
-<script type="text/javascript">
-$(document).ready(function(){
-    $('#lightgallery').lightGallery();
-});
+</div><!-- /container -->
+<footer class="footer-distributed">
+	<div class="footer-left">
+
+		<h3>Programming Club of NITJSR</h3>
+
+		<p class="footer-links">
+			<a href="/">Home</a>
+			·
+			<a href="#">Archives</a>
+			·
+			<a href="#">About</a>
+			·
+			<a href="#">FAQ's</a>
+		</p>
+
+		<p class="footer-company-name">PCON-NITJSR &copy; 2018</p>
+	</div>
+
+	<div class="footer-center">
+
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p><span>National Institute of Technology</span> Jamshedpur</p>
+		</div>
+
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+91 555 123 4567</p>
+		</div>
+
+		<div>·
+			<a href="#">Contact</a>
+			<i class="fa fa-envelope"></i>
+			<p><a href="mailto:pcon-nitjsr@gmail.com">pcon-nitjsr@gmail.com</a></p>
+		</div>
+
+	</div>
+
+	<div class="footer-right">
+
+		<p class="footer-company-about">
+			<span>Reach Us At</span>
+		</p>
+
+		<div class="footer-icons">
+
+			<a href="https://www.facebook.com/pconjsr/" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="https://www.linkedin.com/company/pconjsr/" target="_blank"><i class="fa fa-linkedin"></i></a>
+			<a href="https://github.com/pcon-jsr" target="_blank"><i class="fa fa-github"></i></a>
+
+		</div>
+
+	</div>
+
+</footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+    <script src="lightGallery/dist/js/lightgallery-all.min.js"></script>
+    <script src="lightGallery/lib/jquery.mousewheel.min.js"></script>
+
+
+
+		<script src="../script.js" charset="utf-8"></script>
+
+
+
+		<script src="../js/classie.js"></script>
+		<script src="../js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+    <!-- <script>
+      $('[data-gallery=example]').photoviewer({
+        multiInstances: false
+      });
+    </script> -->
+    <script>
+    require(['./lightgallery.js'], function() {
+        require(["./lg-zoom.js", "./lg-thumbnail.js"], function(){
+            $("#lightgallery").lightGallery();
+        });
+    });
 </script>
-<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-<script src="res/lightGallery/dist/js/lightgallery-all.min.js"></script>
-<script src="res/lightGallery/lib/jquery.mousewheel.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#lightgallery").lightGallery();
+        });
+    </script>
+
+
+
+
+	</body>
+</html>

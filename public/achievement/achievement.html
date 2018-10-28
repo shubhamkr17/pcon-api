@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PCON</title>
+		<meta name="description" content="A sidebar menu as seen on the Google Nexus 7 website" />
+		<meta name="keywords" content="google nexus 7 menu, css transitions, sidebar, side menu, slide out menu" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/component.css" />
+		<script src="../js/modernizr.custom.js"></script>
+
+
+		<link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="../footer/footer-distributed-with-address-and-phones.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+
+
+		<!-- <link rel="stylesheet" href="css/reset.css"> -->
+		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/demo.css"> <!-- Demo style -->
+
+    <link rel="stylesheet" href="style_achievement.css">
+		<link rel="stylesheet" href="../css/custom.css">
+		<style media="screen">
+		#noticeBox {
+			display: none;
+			width: 25%;
+			height: 600%;
+			padding: 0px 12px 0px 12px;
+			overflow-y: auto;
+			background:white;
+			color: #2f2544;
+			z-index:5;
+			position:absolute;
+			right:0;
+			top:60px;
+			border: 1px solid #c6d0da;
+			line-height: 32px;
+		}
+
+		#noticeBody {
+			border-bottom: 1px dashed #97bbce;
+		}
+
+		#noticeContent p {
+			font-size: 16px;
+			color: black;
+		}
+
+
+			@media screen and (max-width: 768px) {
+				#noticeBox {
+					width: 80%;
+					text-align: left;
+				}
+				#noticeBox h3 {
+					font-size: 18px;
+				}
+
+				#noticeBox p {
+					font-size: 16px;
+				}
+				header h1{
+					text-align: center;
+				}
+			}
+
+		</style>
+		<style type="text/css">
+			#timelineBody {
+				background: white;
+			}
+		</style>
+
+	</head>
+	<body style="font-family: Scope one;">
+		<div class="container" id="mainContainer" style="background:#fff;z-index:10">
+			<ul id="gn-menu" class="gn-menu-main">
+			  <li class="gn-trigger">
+			    <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+			    <nav class="gn-menu-wrapper">
+			      <div class="gn-scroller">
+							<ul class="gn-menu">
+			          <li>
+			            <a class="gn-icon gn-icon-download"
+									style="color: #2f2544;" href="https://github.com/pcon-jsr">GitHub Repositories</a>
+			          </li>
+
+
+			          <li>
+			            <a style="color: #2f2544;" class="gn-icon gn-icon-archive">Archives</a>
+			          </li>
+			          <li><a class="gn-icon gn-icon-article" style="color: #2f2544;"
+									href="http://nitjsr.ac.in/">NITJSR Website</a></li>
+								<li><a class="gn-icon gn-icon-help" target="_blank"style="color: #2f2544;"
+									href="https://join.slack.com/t/pcon-nitjsr-workspace/shared_invite/enQtNDI4MTEwNTg1MzMzLTlhZGQ2YzA0Y2QwMzA4YTQzNmYxNWRjMmQ3MTIwYWI1MGQ0N2MwNTFkZmMxZjA1YTM4ZjUxZmZiN2MzZmFiYzI">Help</a></li>
+			        </ul>
+			      </div><!-- /gn-scroller -->
+			    </nav>
+			  </li>
+				<div id="noticeBox">
+					<div id="noticeBody">
+						<div id="noticeHead">
+					<ul style="margin-bottom: 0px; padding-left: 12px; list-style-type: disc;">
+						<li><h3 style="text-decoration: underline; margin-bottom: 0px; font-size: 20px;">[[head]]</h3></li>
+				  </ul>
+				</div>
+				<div id="noticeContent">
+					<p style="padding-bottom: 20px; padding-left: 12px; margin-top: 3px;">[[body]]</p>
+				</div>
+				</div>
+				</div>
+			  <li><a href="/" style="color: #2f2544;font-size:18px">PCON</a></li>
+			  <li><a class="codrops-icon codrops-icon-drop" id="notificationBtn" style="color: #2f2544"><span>Notification</span></a></li>
+
+
+			</ul>
+			<header style="background-color: #48acce;">
+				<h1>ACHIEVEMENTS</h1>
+			</header>
+
+</div><!-- /container -->
+
+
+	<section class="cd-timeline js-cd-timeline" id="timelineBody">
+		<div class="cd-timeline__container">
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+					<img src="img/acm.png" alt="Picture">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>ACM ICPC</h2>
+					<p>Students of  NIT Jamshedpur(Batch 2k13) secured 7th rank in ACM ICPC REGIONAL in Kolkata Region.The Seniors were Shubham Vishwakarma , Shubham Singh , Shubhendu Shisir.</p>
+					<p>Kolkata Region  Rank 19</p>
+					<p>Amiritapuri Region Rank 49</p>
+
+					<!-- <a href="#0" class="cd-timeline__read-more">Read more</a> -->
+					<span class="cd-timeline__date">2014</span>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--movie js-cd-img">
+					<img src="img/tata1.png" alt="Movie">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Tata Crucible Hackathon</h2>
+					<p>In 2018, we launched the first campus edition of Tata Crucible Hackathon, where the most innovative and brightest minds among campus students competed for the coveted prize.</p>
+					<p>The hackathon was conducted across 5 zones and the East Zone finals were hosted by NIT Jamshedpur during Ojass with over a hundred of participants.The team from NIT Jamshedpur emerged victorious and hence became the East Zone champion.</p>
+					<!-- <a href="#0" class="cd-timeline__read-more">Read more</a> -->
+					<span class="cd-timeline__date">2018</span>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+					<img src="img/mast.png" alt="Picture">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Competitive Programming</h2>
+					<p>The members of PCON have always excelled in the field of Competitive Programming .Be it hackerearth, hackerank or codechef, the members of club have participated in and won many contests held by different colleges.</p>
+					<p>Currently NIT Jamshedpur ranks 13 out of 5801 colleges and universities on hackerearth.</p>
+					<!-- <a href="#0" class="cd-timeline__read-more">Read more</a> -->
+					<!-- <span class="cd-timeline__date">Jan 24</span> -->
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--location js-cd-img">
+					<img src="img/atank.png" alt="Location">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>ZS Associates</h2>
+					<p>ZS Associates' advanced data science team conducts yearly hackathon to attract the young undergraduate data science enthusiasts.</p>
+					<p>Through this hackathon our team members have bagged full time offers as well.</p>
+					<!-- <a href="#0" class="cd-timeline__read-more">Read more</a> -->
+					<!-- <span class="cd-timeline__date">2018</span> -->
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--location js-cd-img">
+					<img src="img/manit.png" alt="Location">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Inter NIT Coding Contest</h2>
+					<p>Inter Nit Coding Contest is an yearly Mega Coding Contest for all the NITs of India hosted by NIT Bhopal.</p>
+					<p>The members of PCON have regularly outshined the other NITs in this contest and also won the last edition of the yearly extravaganza.</p>
+					<!-- <a href="#0" class="cd-timeline__read-more">Read more</a> -->
+					<span class="cd-timeline__date">2017</span>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<!-- <div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__imgmovie js-cd-img">
+					<img src="img/cd-icon-movie.svg" alt="Movie">
+				</div> cd-timeline__img -->
+
+				<!-- <div class="cd-timeline__content js-cd-content">
+					<h2>Final Section</h2>
+					<p>This is the content of the last section</p>
+					<span class="cd-timeline__date">Feb 26</span>
+				</div> cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+		</div>
+	</section> <!-- cd-timeline -->
+
+
+	<footer class="footer-distributed">
+
+		<div class="footer-left">
+
+			<h3>Programming Club of NITJSR</h3>
+
+			<p class="footer-links">
+				<a href="/">Home</a>
+				·
+				<a href="#">Archives</a>
+				·
+				<a href="#">About</a>
+				·
+				<a href="#">FAQ's</a>
+			</p>
+
+			<p class="footer-company-name">PCON-NITJSR &copy; 2018</p>
+		</div>
+
+		<div class="footer-center">
+
+			<div>
+				<i class="fa fa-map-marker"></i>
+				<p><span>National Institute of Technology</span> Jamshedpur</p>
+			</div>
+
+			<div>
+				<i class="fa fa-phone"></i>
+				<p>+91 555 123 4567</p>
+			</div>
+
+			<div>
+				<i class="fa fa-envelope"></i>
+				<p><a href="mailto:pcon-nitjsr@gmail.com">pcon-nitjsr@gmail.com</a></p>
+			</div>
+
+		</div>
+
+		<div class="footer-right">
+
+			<p class="footer-company-about">
+				<span>Reach Us At</span>
+			</p>
+
+			<div class="footer-icons">
+
+				<a href="https://www.facebook.com/pconjsr/" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://www.linkedin.com/company/pconjsr/" target="_blank"><i class="fa fa-linkedin"></i></a>
+				<a href="https://github.com/pcon-jsr" target="_blank"><i class="fa fa-github"></i></a>
+
+			</div>
+
+		</div>
+
+	</footer>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="../js/jquery.miranda.min.js"></script>
+		<script src="../script.js" charset="utf-8"></script>
+
+
+		<script src="js/main.js"></script>
+
+		<script src="../js/classie.js"></script>
+		<script src="../js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+
+
+
+
+
+	</body>
+</html>

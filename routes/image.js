@@ -1,4 +1,4 @@
-const imageFolder = './public/res/img/gallery';
+const imageFolder = './public/gallery/img';
 const fs = require('fs');
 
 var express = require('express');
@@ -14,9 +14,13 @@ app.use(express.json());
 /* GET users listing. */
 router.get('/',(req, res)=> {
   var fileList=[];
+
   fs.readdirSync(imageFolder).forEach(file => {
   debug(file);
-  fileList.push(file);
+  var imgObj = {
+    "imgName":file
+  }
+  fileList.push(imgObj);
 })
 res.send(fileList);
 });
