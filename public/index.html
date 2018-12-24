@@ -5,14 +5,30 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>PCON</title>
-		<meta name="description" content="A sidebar menu as seen on the Google Nexus 7 website" />
-		<meta name="keywords" content="google nexus 7 menu, css transitions, sidebar, side menu, slide out menu" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
+
+		<script>
+			function breakout_of_frame()
+			{
+			// see https://www.thesitewizard.com/archive/framebreak.shtml
+			// for an explanation of this script and how to use it on your
+			// own website
+				if (top.location != location) {
+					top.location.href = document.location.href ;
+				}
+			}
+
+			window.onload = breakout_of_frame;
+
+		
+		</script>
 
 
 		<link rel="stylesheet" href="footer/footer-distributed-with-address-and-phones.css">
@@ -231,7 +247,7 @@
 				<div style="clear: both"></div>
 			</div>
 
-			<div id="secondEvent" class="at-column" style="margin-top: 50px; border">
+			<div id="secondEvent" class="at-column" style="margin-top: 50px;">
 				<div class="eventImage" style="float: left">
 					<img src="img/home_pic.jpg">
 				</div>
